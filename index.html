@@ -3,76 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vertical Overlay</title>
+<title>Overlay Minimal</title>
 
 <style>
 body {
   margin: 0;
-  background: #050A18;
+  background: #1C1C1E;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Contenedor fijo 9:16 */
 .overlay {
   width: 1080px;
   height: 1920px;
-  background: radial-gradient(circle at center, #0A1F3D 0%, #050A18 70%);
   position: relative;
+  background: #1C1C1E;
   overflow: hidden;
 }
 
-/* Barra superior */
+/* Barra superior minimal */
 .topbar {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 140px;
-  background: linear-gradient(90deg, #0A1F3D, #1E90FF);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  box-shadow: 0 0 25px #1E90FF;
-}
-
-/* Marco Chat */
-.chat-frame {
-  position: absolute;
-  bottom: 80px;
-  left: 80px;
-  width: 400px;
-  height: 500px;
-  border: 3px solid #1E90FF;
-  border-radius: 25px;
-  box-shadow: 0 0 25px rgba(30,144,255,0.5);
-}
-
-/* Marco Meta */
-.meta-frame {
-  position: absolute;
-  bottom: 80px;
-  right: 80px;
-  width: 400px;
   height: 180px;
-  border: 3px solid #1E90FF;
-  border-radius: 25px;
-  box-shadow: 0 0 25px rgba(30,144,255,0.5);
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 4px;
 }
 
+.topbar .live {
+  font-size: 22px;
+  font-weight: 600;
+  color: #555;
+}
+
+.topbar .playing {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin-top: 5px;
+}
+
+/* Decoración inferior (zona roja) */
+.bottom-decoration {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 700px;
+  background: #161616;
+}
 </style>
 </head>
 
 <body>
 
 <div class="overlay">
-  <div class="topbar">🔵 EN VIVO | COMPETITIVE</div>
-  <div class="chat-frame"></div>
-  <div class="meta-frame"></div>
+  <div class="topbar">
+    <div class="live">EN VIVO</div>
+    <div class="playing">jugando</div>
+  </div>
+
+  <div class="bottom-decoration"></div>
 </div>
 
 </body>
